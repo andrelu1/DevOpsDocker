@@ -1,0 +1,10 @@
+version: '1.0'
+
+services:
+
+    Ex2_2:
+      image: devopsdockeruh/simple-web-service
+      build: .
+      ports: 8080:8080
+      command: server
+      container_name: ex2_2
