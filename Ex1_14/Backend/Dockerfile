@@ -1,4 +1,4 @@
-FROM golang:1.20
+FROM golang:1.20.5
 EXPOSE 8080
 WORKDIR /usr/src/app
 COPY . .
