@@ -1,0 +1,18 @@
+version: '3'
+services:
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
+
+  builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DOCKER_USER=4ndrelu1s
+      - DOCKER_PWD=@bacateMorango123
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: sh -c "/app/build.sh"
