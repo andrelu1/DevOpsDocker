@@ -1,0 +1,8 @@
+FROM ubuntu
+RUN useradd -m appuser
+WORKDIR /mydir
+RUN apt update && \
+    apt install -y neofetch
+ENV LC_ALL=C.UTF-8
+USER appuser
+CMD ["neofetch"]
