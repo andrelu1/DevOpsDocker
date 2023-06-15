@@ -1,0 +1,4 @@
+services:
+  - name: my-app
+    buildCommand: docker build -t 4ndrelu1s/my-app .
+    startCommand: docker run -d -p 80:80 -e =rnd_IIe5udVA0ip0uTCZpIPf0lCy63CN 4ndrelu1s/my-app
